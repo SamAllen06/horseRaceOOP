@@ -1,10 +1,10 @@
 #include "race.h"
-#include "horse.cpp"
+#include <iostream>
 
 Race::Race(){
-	const int numHorses = 5;
+	Horse horses[5] = {Horse(), Horse(), Horse(), Horse(), Horse()};
 	const static int trackLength = 15;
-	Horse horses[numHorses] = [0, 0, 0, 0, 0];
+	const int numHorses = 5;
 
 } //end constructor definition
 
@@ -12,7 +12,7 @@ void Race::run(){
 	int i;
 	bool keepGoing = true;
 	for (i = 0; i < Race::numHorses; i++){
-		horses[i].init(1, trackLength);
+		horses[i].init(i, Race::trackLength);
 	} //end for loop
 	while (keepGoing){
 		for (i = 0; i < Race::numHorses; i++){
@@ -23,7 +23,9 @@ void Race::run(){
 				keepGoing = false;
 			}//end if statement
 		}//end for loop
-		std::cout << "Press Enter to play another round!" << std::endl;
-		std::cin.ignore();
+		if (keepGoing){
+			std::cout << "Press Enter to play another round!" << std::endl;
+			std::cin.ignore();
+		}//end if statement
 	}//end while loop
 } // end run definition

@@ -1,13 +1,8 @@
-main.o: main.cpp
-	g++ -g main.cpp -o main.o
-
-horse.o: horse.cpp horse.h
-	g++ -g horse.cpp -o horse.o
-
-race.o: race.cpp race.h
-	g++ -g race.cpp -o race.o
+main.o: main.cpp horse.h race.h
+	g++ -g main.cpp horse.cpp race.cpp -o main.o
 
 run: main.o
+	g++ -g main.cpp horse.cpp race.cpp -o main.o
 	./main.o
 
 clean: 

@@ -3,13 +3,13 @@
 #ifndef RACE_H_EXISTS
 #define RACE_H_EXISTS
 
-#include "horse.cpp"
+#include "horse.h"
 
 class Race{
 	private:
-		Horse horses[];
-		const static int trackLength;
-		const int numHorses;
+		Horse horses[5];
+		const static int trackLength=15;
+		const int numHorses=5;
 	
 	public:
 		Race();
