@@ -37,7 +37,6 @@ void Horse::printLane(){
 		}//end else statement
 	}//end for statement
 	std::cout << std::endl;
-	std::cout << Horse::position << position << std::endl;
 }//end printlane definition
 
 bool Horse::isWinner(){

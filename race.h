@@ -3,7 +3,9 @@
 #ifndef RACE_H_EXISTS
 #define RACE_H_EXISTS
 
-class Race(){
+#include "horse.cpp"
+
+class Race{
 	private:
 		Horse horses[];
 		const static int trackLength;
