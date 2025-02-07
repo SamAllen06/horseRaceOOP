@@ -1,5 +1,8 @@
 //race.h
 
+#ifndef RACE_H_EXISTS
+#define RACE_H_EXISTS
+
 class Race(){
 	private:
 		Horse horses[];
@@ -9,4 +12,6 @@ class Race(){
 	public:
 		Race();
 		void run();
-}; //end Race definition
+}; //end Race definitioni
+
+#endif

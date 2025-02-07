@@ -11,7 +11,7 @@ class Horse{
 	
 	public:
 		Horse();
-		init(int horseNum, int trackLength);
+		void init(int horseNum, int trackLength);
 		void advance();
 		void printLane();
 		bool isWinner();
