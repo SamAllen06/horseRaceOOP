@@ -10,7 +10,7 @@ Horse::Horse(){
 } //end constructor
 
 void Horse::init(int horseNum, int trackLength){
-	Horse::position = 0;
+	position = Horse::position;
 	Horse::horseNum = horseNum;
 	Horse::trackLength = trackLength;
 } //end initializer
@@ -29,7 +29,7 @@ void Horse::advance(){
 void Horse::printLane(){
 	int i;
 	for (i=0; i < trackLength; i++){
-		if (i == position){
+		if (i == Horse::position){
 			std::cout << horseNum;
 		}//end if statement
 		else{
@@ -37,7 +37,7 @@ void Horse::printLane(){
 		}//end else statement
 	}//end for statement
 	std::cout << std::endl;
-	std::cout << Horse::position << std::endl;
+	std::cout << Horse::position << position << std::endl;
 }//end printlane definition
 
 bool Horse::isWinner(){
